@@ -8,6 +8,9 @@ This project contains:
 3. Service-Registry -> Spring Boot Eureka Registry
 4. core-library -> Core, helper, base
 
+# Architecture
+<span align="center"><img width="760px" height="360px" src="docs/arch.jpg"></span>
+
 # How to run
 To run this service, make sure service-registry has been started, to do that use:
 
