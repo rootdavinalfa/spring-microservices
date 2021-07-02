@@ -1,5 +1,2 @@
 rootProject.name = 'spring-microservices'
-include('service-registry')
-include('service-user')
-include('service-hr')
-include 'core-library'
+include('service-registry','service-user','service-hr','core-library','service-gateway')
