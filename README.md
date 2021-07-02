@@ -30,3 +30,5 @@ service-registry -> http://127.0.0.1:9090/eureka
 service-user ->  http://127.0.0.1:9091
 
 service-hr ->  http://127.0.0.1:9092
+
+service-gateway ->  http://127.0.0.1:8080 ( Published endpoint at /user/** /employee/** )
