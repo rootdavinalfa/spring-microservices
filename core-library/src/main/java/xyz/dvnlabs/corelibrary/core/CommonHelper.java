@@ -145,10 +145,10 @@ public class CommonHelper {
      * @param dateFormat    the date format
      * @return the string
      */
-    @SneakyThrows
+
     public static String getStringSeq(
             String lastSeq, Date date, String prefix, String midfix, int zeroFill,
-            boolean withAlfaMonth, @Nullable String dateFormat) {
+            boolean withAlfaMonth, @Nullable String dateFormat) throws AppException {
         try {
             String strAlfaMonth = "";
             if (withAlfaMonth)
