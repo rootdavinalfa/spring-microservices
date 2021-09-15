@@ -23,6 +23,11 @@ service-order
 
     gradle service-order:bootRun
 
+service-gateway
+
+    gradle service-gateway:bootRun
+
+
 # Service Mapping
 This project preconfigured with this mapping:
 
@@ -33,3 +38,10 @@ service-user ->  http://127.0.0.1:9091
 service-order ->  http://127.0.0.1:9092
 
 service-gateway ->  http://127.0.0.1:8080 ( Published endpoint at /user/** /order/** )
+
+# Swagger
+
+This project can use swagger. You can visit it on
+
+- service-order on 127.0.0.1:9092/swagger-ui/#/
+- service-user on 127.0.0.1:9091/swagger-ui/#/
