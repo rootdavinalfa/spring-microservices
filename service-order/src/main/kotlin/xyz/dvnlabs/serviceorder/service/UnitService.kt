@@ -32,6 +32,10 @@ class UnitService {
         }
 
 
-        return unitRepository.save(unit)
+        return unitRepository.saveAndFlush(unit)
+    }
+
+    fun findAll(): List<Unit>{
+        return unitRepository.findAll()
     }
 }

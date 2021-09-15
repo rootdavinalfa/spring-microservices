@@ -10,8 +10,8 @@ import xyz.dvnlabs.serviceorder.entity.OrderDPK
 import xyz.dvnlabs.serviceorder.entity.OrderH
 import xyz.dvnlabs.serviceorder.repository.OrderDRepository
 import xyz.dvnlabs.serviceorder.repository.OrderRepository
-import xyz.dvnlabs.serviceorder.repository.UnitRepository
 import java.util.*
+import javax.persistence.criteria.Path
 import javax.transaction.Transactional
 
 @Service
@@ -69,7 +69,7 @@ class OrderService {
             }
             saveOrderD(
                 OrderD(
-                    OrderDPK(orderH.orderId, ""), it.unitid, it.qty, it.orderNote, it.orderName
+                    OrderDPK(orderH.orderId, ""), it.unitid, it.qty, it.orderNote, unit.unitname
                 )
             )
         }
@@ -77,6 +77,10 @@ class OrderService {
 
     fun findAllOrder(): List<OrderH> {
         return orderRepository.findAll()
+    }
+
+    fun findAllOrderD(): List<OrderD> {
+        return orderDRepository.findAll()
     }
 
 }

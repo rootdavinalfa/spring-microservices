@@ -5,6 +5,6 @@ import javax.persistence.Embeddable
 
 @Embeddable
 data class OrderDPK(
-    val orderId : String,
-    var orderDId : String
+    val orderId : String ="",
+    var orderDId : String=""
 ) : Serializable
